@@ -22,12 +22,12 @@ In Proceedings of the 28th International Joint Conference on Artificial Intellig
 }
 ```
 
-#### LICENSE
+### LICENSE
 This software is released under the MIT license. Please read `LICENSE.txt` for details.
 
 
 ## How to Use
-#### Requirements
+### Requirements
 gScarf requires the following softwares.
 * gcc Version 4.8.5 (or later)
 * boost C++ Libraries Version 1.53.0 (or later)
@@ -36,7 +36,7 @@ We have confirmed that our software works on the following environments.
 * CentOS 7.6
 * MacOS 10.14.6
 
-#### Build
+### Build
 1. Install *gcc* and *boost libraries* on your environment.
 2. Rewrite `Makefile`. You should add your file path of "libboost_serialization.a" in the directory of the boost libraries to `Makefile` like as follows:
 ```Makefile
@@ -48,8 +48,8 @@ $ make clean; make
 ```
 4. If you can find `gscarf` and `convert`, the build has been successfully completed.
 
-#### Usage
-###### Input file
+### Usage
+#### Input file
 Input file must be formatted as a list of edges included in a given graph; each line represents a pair of node IDs that are connected via an edge. The nodes in the same line must be spanned by `TAB` or `space` like as follows:
 ``` sample_graph.txt
 1	90
@@ -61,7 +61,7 @@ Input file must be formatted as a list of edges included in a given graph; each 
 ...
 ```
 
-##### File conversion
+#### File conversion
 `gscarf` reads the given graph by the CRS format, and this requires a file conversion process. 
 To covert the input file (`sample_graph.txt`) into the CRS format (`sample_graph.bin`), you should run `convert` like as follows:
 ``` convert
@@ -71,7 +71,7 @@ $ ./convert -i sample_graph.txt -o sample_graph.bin
 
 Note that `convert` will converts the input file as an undirected graph in this file conversion process even though the input file represents a directed graph.
 
-##### Clustering
+#### Clustering
 Finally, we can run the clustering by `gscarf` like as follows:
 ```
 $ ./gscarf sample_graph.bin
@@ -82,7 +82,7 @@ $ ./gscarf sample_graph.bin
 |`-v`  |Display a clustering result of gScarf. This result is formatted as a list of node ID and its corresponding cluster ID.|
 |`-r`  |Display statistics (e.g., # of clusters, avg. size of clusters, etc.)|
 
-###### Example
+##### Examples
 * Display the clustering result; each line indicates a pair of node ID and corresponding cluster ID.
 For example, in the following example, nodes `991` and `993` are included in a cluster `21`.
 ```
