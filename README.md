@@ -32,7 +32,13 @@ make clean; make
 
 #### Usage
 ###### Input file
-Input file must be formatted as a list of edges included in a given graph; each line represents a pair of nodes that are connected via an edge. The nodes in the same line must be spanned by `TAB` or `space`.
+Input file must be formatted as a list of edges included in a given graph; each line represents a pair of nodes that are connected via an edge. The nodes in the same line must be spanned by `TAB` or `space` like as follows:
 ``` sample_graph.txt
-
+0 1
+0	2
+1	2
+2	3
+3	4
+3	5
+4	5
 ```
