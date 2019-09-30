@@ -6,10 +6,27 @@ If you use our software, **please cite the following paper**.
 **"Scaling Fine-grained Modularity Clustering for Massive Graphs,"** 
 In _Proceedings of the 28th International Joint Conference on Artificial Intelligence (IJCAI2019)_, pp.4597-4604, Macao, China, August 2019. 
 
-### LICENSE
+``` 
+@inproceedings{ShiokawaTK2019,
+  title     = {{Scaling Fine-grained Modularity Clustering for Massive Graphs}},
+  author    = {Shiokawa, Hiroaki and Amagasa, Toshiyuki and Kitagawa, Hiroyuki},
+  booktitle = {Proceedings of the 28th International Joint Conference on
+               Artificial Intelligence, {IJCAI-19}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},             
+  pages     = {4597--4604},
+  year      = {2019},
+  month     = {7},
+  doi       = {10.24963/ijcai.2019/639},
+  url       = {https://doi.org/10.24963/ijcai.2019/639},
+}
+```
+
+#### LICENSE
 This software is released under the MIT license. Please read `LICENSE.txt` for details.
 
-### How to Use
+------
+
+## How to Use
 #### Requirements
 gScarf requires the following softwares.
 * gcc Version 4.8.5 (or later)
@@ -94,3 +111,7 @@ Number of clusters:36
 Average cluster size:27.8056
 Largest cluster size:49
 ```
+
+## Reference
+* Hiroaki Shiokawa, Toshiyuki Amagasa, Hiroyuki Kitagawa, **"Scaling Fine-grained Modularity Clustering for Massive Graphs,"**  In _Proceedings of the 28th International Joint Conference on Artificial Intelligence (IJCAI2019)_, pp.4597-4604, Macao, China, August 2019. 
+* http://www.kde.cs.tsukuba.ac.jp/~shion/index.html.en
