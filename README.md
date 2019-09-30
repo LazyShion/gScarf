@@ -27,18 +27,70 @@ LIB= (add your path of "libboost_serialization.a" here)
 ```
 3. Build the software.
 ```
-make clean; make
+$ make clean; make
 ```
+4. If you can find `gscarf` and `convert`, the build has been successfully completed.
 
 #### Usage
 ###### Input file
-Input file must be formatted as a list of edges included in a given graph; each line represents a pair of nodes that are connected via an edge. The nodes in the same line must be spanned by `TAB` or `space` like as follows:
+Input file must be formatted as a list of edges included in a given graph; each line represents a pair of node IDs that are connected via an edge. The nodes in the same line must be spanned by `TAB` or `space` like as follows:
 ``` sample_graph.txt
-0 1
-0	2
-1	2
-2	3
-3	4
-3	5
-4	5
+1	90
+1	109
+1	207
+1	282
+1	321
+1	699
+...
+```
+
+##### File conversion
+`gscarf` reads the given graph by the CRS format, and this requires a file conversion process. 
+To covert the input file (`sample_graph.txt`) into the CRS format (`sample_graph.bin`), you should run `convert` like as follows:
+``` convert
+$ ./convert -i sample_graph.txt -o sample_graph.bin
+```
+`convert` requires two options, `-i` and `-o`, that specify names of the input file and the CRS formatted file, respectively.
+
+Note that `convert` will converts the input file as an undirected graph in this file conversion process even though the input file represents a directed graph.
+
+##### Clustering
+Finally, we can run the clustering by `gscarf` like as follows:
+```
+$ ./gscarf sample_graph.bin
+```
+`gscarf` has the following two options.
+|Option|Description|
+|------|:----------|
+|`-v`  |Display a clustering result of gScarf. This result is formatted as a list of node ID and its corresponding cluster ID.|
+|`-r`  |Display statistics (e.g., # of clusters, avg. size of clusters, etc.)|
+
+###### Example
+* Display the clustering result; each line indicates a pair of node ID and corresponding cluster ID.
+For example, in the following example, nodes `991` and `993` are included in a cluster `21`.
+```
+$ ./gscarf -v sample_graph.bin
+...
+991	21
+992	8
+993	21
+994	8
+995	4
+996	4
+997	8
+998	17
+999	4
+1000	4
+```
+
+* You can display statistics of the clustering result by using option `-d`.
+```
+$ ./gscarf sample_graph.bin -d
+Number of nodes: 1001
+Number of edges: 15534
+Runtime for clustering (sec.):0
+Modularity Q:0.851665
+Number of clusters:36
+Average cluster size:27.8056
+Largest cluster size:49
 ```
