@@ -25,7 +25,6 @@ In Proceedings of the 28th International Joint Conference on Artificial Intellig
 #### LICENSE
 This software is released under the MIT license. Please read `LICENSE.txt` for details.
 
-------
 
 ## How to Use
 #### Requirements
