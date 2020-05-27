@@ -1,4 +1,4 @@
-## Scaling Fine-grained Modularity Clustering on Massive Graphs
+## Scaling Fine-grained Modularity Clustering for Massive Graphs
 The implementation of gScarf proposed in IJCAI'19.
 If you use our software, **please cite the following paper**.
 
