@@ -80,7 +80,7 @@ $ ./gscarf sample_graph.bin
 |Option|Description|
 |------|:----------|
 |`-v`  |Display a clustering result of gScarf. This result is formatted as a list of node ID and its corresponding cluster ID.|
-|`-r`  |Display statistics (e.g., # of clusters, avg. size of clusters, etc.)|
+|`-d`  |Display statistics (e.g., # of clusters, avg. size of clusters, etc.)|
 
 ##### Examples
 * Display the clustering result; each line indicates a pair of node ID and corresponding cluster ID.
